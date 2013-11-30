@@ -80,9 +80,9 @@
                                 data: filedata,
                                 headers: angular.extend({
                                     'Content-Type': mimeType,
-                                    'Content-Length': filedata.length,
                                     'Accept': undefined
-                                }, file._requiredHeaders)
+                                }, file._requiredHeaders),
+                                transformRequest: angular.identity
                             };
                         },
                         download: function(file) {
